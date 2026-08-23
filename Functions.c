@@ -188,6 +188,56 @@ void adminPanel()
     }
 }
 
+void employeeLogin()
+{
+    char username[30];
+    char password[30];
+
+    int attempt = 0;
+
+    while(attempt < 3)
+    {
+        system("cls");
+
+        printf("=====================================\n");
+        printf("       EMPLOYEE LOGIN PANEL\n");
+        printf("=====================================\n");
+
+        printf("\nUsername : ");
+        scanf("%s", username);
+
+        printf("Password : ");
+        scanf("%s", password);
+
+        if(strcmp(username, EMP_USER) == 0 &&
+           strcmp(password, EMP_PASS) == 0)
+        {
+            printf("\nLogin Successful!\n");
+
+            loading();
+
+            employeePanel();
+
+            return;
+        }
+        else
+        {
+            attempt++;
+
+            printf("\nInvalid Username or Password!\n");
+            printf("Remaining Attempts : %d\n", 3 - attempt);
+
+            system("pause");
+        }
+    }
+
+    printf("\nToo Many Failed Attempts!\n");
+    printf("Returning to Main Menu...\n");
+
+    system("pause");
+}
+
+
 
 
 
