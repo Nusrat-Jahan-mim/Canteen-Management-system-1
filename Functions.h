@@ -25,4 +25,6 @@ void employeePanel();
 void employeeLogin();
 void employeePanel();
 
-
+#include <conio.h>
+void inputPassword(char password[]);
+void customerPanel();
