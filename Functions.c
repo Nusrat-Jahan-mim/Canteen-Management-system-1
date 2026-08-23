@@ -283,7 +283,7 @@ void employeePanel()
     }
 }
 
-
+//Password Mask Function
 void inputPassword(char password[])
 {
     int i = 0;
@@ -310,6 +310,76 @@ void inputPassword(char password[])
         }
     }
 }
+
+//Password Mask Function
+inputPassword(password);
+//Customer Panel
+void customerPanel()
+{
+    int choice;
+
+    while(1)
+    {
+        system("cls");
+
+        printf("=====================================\n");
+        printf("         CUSTOMER PANEL\n");
+        printf("=====================================\n");
+
+        printf("1. View Food Menu\n");
+        printf("2. Order Food\n");
+        printf("3. Search Food\n");
+        printf("4. Exit\n");
+
+        printf("\nEnter Choice : ");
+        scanf("%d",&choice);
+
+        switch(choice)
+        {
+            case 1:
+                printf("\nFood Menu Module (Part-2)\n");
+                break;
+
+            case 2:
+                printf("\nOrder Module (Part-4)\n");
+                break;
+
+            case 3:
+                printf("\nSearch Module (Part-6)\n");
+                break;
+
+            case 4:
+                return;
+
+            default:
+                printf("\nInvalid Choice!\n");
+        }
+
+        system("pause");
+    }
+}
+
+//Main Menu Update
+printf("1. Admin Login\n");
+printf("2. Employee Login\n");
+printf("3. Customer Panel\n");
+printf("4. Exit\n");
+
+
+case 1:
+    adminLogin();
+    break;
+
+case 2:
+    employeeLogin();
+    break;
+
+case 3:
+    customerPanel();
+    break;
+
+case 4:
+    exit(0);
 
 
 
