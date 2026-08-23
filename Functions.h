@@ -28,3 +28,18 @@ void employeePanel();
 #include <conio.h>
 void inputPassword(char password[]);
 void customerPanel();
+
+#define FOOD_FILE "food.dat"
+
+typedef struct
+{
+    int id;
+    char name[50];
+    float price;
+    int quantity;
+} Food;
+
+void addFood();
+void displayFood();
+
+
