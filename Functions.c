@@ -238,6 +238,53 @@ void employeeLogin()
 }
 
 
+void employeePanel()
+{
+    int choice;
+
+    while(1)
+    {
+        system("cls");
+
+        printf("=====================================\n");
+        printf("        EMPLOYEE DASHBOARD\n");
+        printf("=====================================\n");
+
+        printf("1. Display Food Menu\n");
+        printf("2. Take Customer Order\n");
+        printf("3. Print Receipt\n");
+        printf("4. Logout\n");
+
+        printf("\nEnter Choice : ");
+        scanf("%d",&choice);
+
+        switch(choice)
+        {
+            case 1:
+                printf("\nFood Menu Module (Part-2)\n");
+                break;
+
+            case 2:
+                printf("\nCustomer Order Module (Part-4)\n");
+                break;
+
+            case 3:
+                printf("\nReceipt Module (Part-5)\n");
+                break;
+
+            case 4:
+                return;
+
+            default:
+                printf("\nInvalid Choice!\n");
+        }
+
+        system("pause");
+    }
+}
+
+
+
 
 
 
