@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -10,7 +9,7 @@ void adminLogin()
     char username[30];
     char password[20];
 
-    printf("\n========== ADMIN LOGIN ==========\n");
+    printf("\n[ADMIN LOGIN]\n");
 
     printf("Username: ");
     scanf("%29s", username);
@@ -22,11 +21,11 @@ void adminLogin()
        strcmp(password, ADMIN_PASS) == 0)
     {
         printf("\nLogin Successful!\n");
-        printf("Welcome, Admin!\n");
+        printf("Welcom to NUB Canteen\n");
     }
     else
     {
-        printf("\nInvalid Username or Password!\n");
+        printf("\nInvalid Username or Password! Try again\n");
     }
 }
 
