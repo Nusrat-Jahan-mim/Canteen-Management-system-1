@@ -84,3 +84,56 @@ void mainMenu()
         }
     }
 }
+
+
+void adminLogin()
+{
+    char username[30];
+    char password[30];
+
+    int attempt = 0;
+
+    while(attempt < 3)
+    {
+        system("cls");
+
+        printf("\n====================================\n");
+        printf("         ADMIN LOGIN PANEL\n");
+        printf("====================================\n");
+
+        printf("\nUsername : ");
+        scanf("%s", username);
+
+        printf("Password : ");
+        scanf("%s", password);
+
+        if(strcmp(username, ADMIN_USER)==0 &&
+           strcmp(password, ADMIN_PASS)==0)
+        {
+            printf("\n\nLogin Successful...\n");
+
+            loading();
+
+            adminPanel();
+
+            return;
+        }
+
+        else
+        {
+            printf("\nWrong Username or Password\n");
+
+            attempt++;
+
+            printf("Remaining Attempt : %d\n",3-attempt);
+        }
+
+        system("pause");
+    }
+
+    printf("\nAccess Denied.\n");
+    system("pause");
+}
+
+
+
