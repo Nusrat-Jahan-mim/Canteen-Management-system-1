@@ -284,6 +284,33 @@ void employeePanel()
 }
 
 
+void inputPassword(char password[])
+{
+    int i = 0;
+    char ch;
+
+    while(1)
+    {
+        ch = getch();
+
+        if(ch == 13) // Enter
+        {
+            password[i] = '\0';
+            break;
+        }
+        else if(ch == 8 && i > 0) // Backspace
+        {
+            i--;
+            printf("\b \b");
+        }
+        else if(ch != 8)
+        {
+            password[i++] = ch;
+            printf("*");
+        }
+    }
+}
+
 
 
 
